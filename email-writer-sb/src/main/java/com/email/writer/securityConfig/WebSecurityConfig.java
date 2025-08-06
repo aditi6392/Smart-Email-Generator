@@ -58,6 +58,7 @@ public class WebSecurityConfig {
                         .requestMatchers(HttpMethod.OPTIONS,"/**").permitAll()
                         .requestMatchers("/api/auth/**").permitAll()
                         .requestMatchers("/api/email/**").authenticated()
+                        .requestMatchers("/api/emails/**").authenticated()
                         .anyRequest().permitAll()
                 )
                         .sessionManagement(session->session
